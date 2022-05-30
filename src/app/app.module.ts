@@ -9,6 +9,9 @@ import { MoviesComponent } from './movies/movies.component';
 import { PeopleComponent } from './people/people.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './navbar/navbar.component';
+import { TestService } from './test.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TvComponent,
     MoviesComponent,
     PeopleComponent,
-    ContactsComponent
+    ContactsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

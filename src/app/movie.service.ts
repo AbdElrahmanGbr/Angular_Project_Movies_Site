@@ -12,6 +12,7 @@ export class MovieService {
    }
    getTrendingAll():Observable<any>
    {
+    return this._HttpClient.get("https://api.themoviedb.org/3/trending/all/day?api_key=ea3a1fce6409d9a1d16b3801182db0a4");
    }
    getTest():string
   {

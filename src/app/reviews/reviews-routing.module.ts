@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SendfeedbackComponent } from './sendfeedback/sendfeedback.component';
+import { SendmessageComponent } from './sendmessage/sendmessage.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: SendfeedbackComponent, pathMatch: 'full' },
+  {path: 'message', component: SendmessageComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

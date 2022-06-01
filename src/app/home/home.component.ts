@@ -8,11 +8,18 @@ import { MovieService } from '../movie.service';
   providers: [MovieService]
 })
 export class HomeComponent implements OnInit {
-
-
+  name?:string;
+  term:any;
+  pageNumbers:number[]=[];
   trendingAll:any=[];
+
   constructor(private _MovieService:MovieService) {
-    _MovieService.getTrendingAll().subscribe((data) => {
+    for(let i=1;i<=10;i++)
+    {
+      this.pageNumbers.push(i);
+    }
+
+    _MovieService.getTrendingAll(3).subscribe((data) => {
       this.trendingAll = data.results;
       console.log(data.results);
     });

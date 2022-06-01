@@ -18,6 +18,11 @@ import { SendmessageComponent } from './sendmessage/sendmessage.component';
   exports: [
     SendfeedbackComponent,
     SendmessageComponent,
-  ]
+  ],
+  bootstrap: [SendfeedbackComponent]
 })
-export class ReviewsModule { }
+export class ReviewsModule {
+  constructor(){
+    console.log("ReviewsModule loaded");
+  }
+}

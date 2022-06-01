@@ -15,6 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WatchsPipe } from './watchs.pipe';
+import { SeemorePipe } from './seemore.pipe';
+import { SearchPipe } from './search.pipe';
+import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactsComponent,
     NavbarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    WatchsPipe,
+    SeemorePipe,
+    SearchPipe,
+    MoviedetailsComponent
   ],
   imports: [
     BrowserModule,

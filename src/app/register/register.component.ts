@@ -12,8 +12,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder , private http: HttpClient) {
     this.form = this.formBuilder.group({
-      firstName: '',
-      lastName: '',
+      name: '',
       email: '',
       password: ''
     });
@@ -23,11 +22,11 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.form.getRawValue);
-    // this.http.post('http://localhost:8000/api/register', this.form.getRawValue()).subscribe(
-    //   (data:any) => {
-    //     console.log(data);
-    //   });
+    // console.log(this.form.value);
+    this.http.post('http://localhost:8000/api/register', this.form.value).subscribe(
+      (data:any) => {
+        console.log(data);
+      });
   }
 
 }

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class MoviesService {
 
   constructor(private _HttpClient:HttpClient) {
    }

@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
 import { MoviesComponent } from './movies/movies.component';
 import { PeopleComponent } from './people/people.component';
 import { RegisterComponent } from './register/register.component';
@@ -13,6 +14,7 @@ import { TvComponent } from './tv/tv.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  {path: 'moviedetails/:id', component:MoviedetailsComponent},
   { path: 'about', component: AboutComponent },
   { path: 'tv', component: TvComponent },
   { path: 'movies', component: MoviesComponent },

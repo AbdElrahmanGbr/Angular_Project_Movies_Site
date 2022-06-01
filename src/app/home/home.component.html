@@ -13,7 +13,7 @@
     <div class="movie position-relative">
       <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="movie poster" class="img-fluid">
       <h6 class="text-white my-2">{{movie.title == undefined ? movie.name:movie.title|watchs}}</h6>
-    <div class="vote">{{movie.overview.vote_average}}<a>see more...</a></div>
+    <div class="vote">{{movie.vote_average}}</div>
   </div>
 </a>
   </div>

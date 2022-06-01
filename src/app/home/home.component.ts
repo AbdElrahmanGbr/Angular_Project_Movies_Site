@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
 
     _MoviesService.getTrendingAll(1).subscribe((data) => {
       this.trendingAll = data.results;
-      console.log(data.results);
     });
 
    }
@@ -34,7 +33,6 @@ export class HomeComponent implements OnInit {
         this.currentPage--;
         this._MoviesService.getTrendingAll(this.currentPage).subscribe((data) => {
           this.trendingAll = data.results;
-          console.log(data.results);
         });
       }
       else{
@@ -48,7 +46,6 @@ export class HomeComponent implements OnInit {
         this.currentPage++;
         this._MoviesService.getTrendingAll(this.currentPage).subscribe((data) => {
           this.trendingAll = data.results;
-          console.log(data.results);
         });
       }
       else{
@@ -60,9 +57,7 @@ export class HomeComponent implements OnInit {
       this.currentPage = ind;
     this._MoviesService.getTrendingAll(this.currentPage).subscribe((data) => {
       this.trendingAll = data.results;
-      console.log(data.results);
     });
-    window.alert(ind);
    }
   ngOnInit(): void {
   }
